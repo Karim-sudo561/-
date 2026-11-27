@@ -1,0 +1,143 @@
+:root {
+  --green: #123b32;
+  --green-2: #1d5949;
+  --gold: #d6b56d;
+  --cream: #f7f4eb;
+  --ink: #20332d;
+  --muted: #718078;
+  --white: #fffefa;
+  --shadow: 0 14px 40px rgba(18,59,50,.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: var(--ink);
+  font-family: Tahoma, Arial, sans-serif;
+  background: radial-gradient(circle at 10% 5%, rgba(214,181,109,.15), transparent 25rem), var(--cream);
+}
+header {
+  color: white; text-align: center; padding: 38px 18px 34px;
+  background: linear-gradient(135deg, #0d2d27, #1d5949);
+  border-bottom: 4px solid var(--gold);
+}
+.brand { color: var(--gold); font-size: 13px; letter-spacing: 3px; }
+h1 { margin: 10px 0 8px; font-size: clamp(30px, 6vw, 46px); }
+header p { margin: 0; color: #e1e9e3; line-height: 1.9; }
+main { width: min(920px, calc(100% - 28px)); margin: 28px auto 50px; }
+.intro { text-align: center; margin: 0 0 22px; color: var(--muted); line-height: 1.9; }
+.tabs { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin-bottom: 18px; }
+.tab {
+  border: 1px solid #d8dfd7; background: var(--white); color: var(--green);
+  border-radius: 999px; padding: 11px 18px; font: inherit; cursor: pointer; transition: .2s;
+}
+.tab.active, .tab:hover { background: var(--green); color: white; border-color: var(--green); }
+.panel {
+  display: none; background: var(--white); border: 1px solid #e8e5da;
+  border-radius: 24px; padding: clamp(20px, 5vw, 38px); box-shadow: var(--shadow); text-align: center;
+}
+.panel.active { display: block; }
+.eyebrow { color: var(--green-2); font-size: 13px; font-weight: bold; }
+h2 { margin: 10px 0 8px; color: var(--green); font-size: 25px; }
+.hint { color: var(--muted); line-height: 1.8; margin: 0 auto 22px; max-width: 580px; }
+.dhikr {
+  display: grid; place-items: center; min-height: 155px; padding: 22px 12px; margin: 18px 0;
+  border-radius: 18px; color: var(--green); background: linear-gradient(135deg, #f4f0e3, #fbfaf5);
+  border: 1px solid #eee6d2; font-size: clamp(27px, 6vw, 40px); font-weight: bold; line-height: 1.8;
+}
+.progress { color: var(--muted); font-size: 14px; margin: 12px 0 20px; }
+.main-btn {
+  display: inline-block; min-width: 190px; border: 0; border-radius: 15px; padding: 16px 25px;
+  color: white; background: var(--green); font: bold 18px Tahoma, Arial, sans-serif;
+  cursor: pointer; box-shadow: 0 7px 18px rgba(18,59,50,.18); transition: transform .15s, background .15s;
+}
+.main-btn:hover { background: var(--green-2); transform: translateY(-2px); }
+.main-btn:active { transform: scale(.98); }
+.count {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 105px; min-height: 62px;
+  margin: 18px auto 4px; padding: 8px 20px; border: 1px solid #e8dfc8; border-radius: 16px;
+  background: #fbf8ef; color: var(--green); font-size: 30px; font-weight: bold;
+}
+.count-label { display: block; color: var(--muted); font-size: 13px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 20px; }
+.zikr-card { border: 1px solid #e8e5da; border-radius: 18px; padding: 20px 15px; background: #fffefa; text-align: center; }
+.zikr-card h3 { margin: 0 0 12px; color: var(--green); font-size: 21px; line-height: 1.7; }
+.zikr-card .count { margin-top: 5px; }
+.small-btn {
+  display: block; width: 100%; margin-top: 14px; padding: 12px; border: 0; border-radius: 12px;
+  background: var(--green); color: white; font: bold 15px Tahoma, Arial, sans-serif; cursor: pointer;
+}
+.small-btn:hover { background: var(--green-2); }
+.actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+.reset { border: 1px solid #d8cdb5; color: #725b31; background: transparent; border-radius: 12px; padding: 11px 17px; font: inherit; cursor: pointer; }
+footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 15px 28px; line-height: 2; }
+.toast { min-height: 24px; color: var(--green-2); font-size: 14px; margin-top: 12px; }
+@media (max-width: 480px) {
+  header { padding-top: 30px; }
+  .tab { flex: 1 1 40%; }
+  .panel { border-radius: 18px; }
+}
+
+
+/* Dedication banner */
+.dedication {
+  width: min(820px, calc(100% - 28px));
+  margin: 24px auto 0;
+  padding: 26px 22px;
+  text-align: center;
+  color: #f9f5e9;
+  background: linear-gradient(135deg, #173f35, #245b4b);
+  border: 1px solid rgba(214,181,109,.75);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+.dedication-mark { color: var(--gold); font-size: 27px; }
+.dedication-label { margin: 7px 0; color: #e7d7ae; font-size: 14px; }
+.dedication h2 { margin: 6px 0; color: #fff; font-size: clamp(22px, 4vw, 30px); }
+.dedication-note { margin: 7px 0 12px; color: #e7d7ae; font-weight: bold; }
+.dedication-dua { max-width: 650px; margin: 0 auto; color: #edf2ed; line-height: 2; font-size: 14px; }
+
+/* Quran player */
+.quran-section {
+  margin: 0 auto 22px;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid #e8e5da;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+.quran-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 14px; }
+.quran-icon {
+  display: grid; place-items: center; flex: 0 0 46px; height: 46px;
+  border-radius: 14px; background: #f4f0e3; color: var(--green); font-size: 25px;
+}
+.quran-heading h2 { margin: 0 0 4px; font-size: 20px; }
+.quran-heading p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.quran-player {
+  display: block; width: 100%; height: 180px; border: 0;
+  border-radius: 13px; background: #f7f4eb;
+}
+.audio-note { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+@media (max-width: 480px) {
+  .dedication { padding: 22px 15px; }
+  .quran-section { padding: 15px; }
+  .quran-player { height: 190px; }
+}
+
+
+/* Memorial portrait */
+.memorial-photo {
+  display: block;
+  width: min(230px, 68vw);
+  height: 280px;
+  object-fit: cover;
+  object-position: center 25%;
+  margin: 16px auto 18px;
+  border: 4px solid var(--gold);
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.24);
+}
+@media (max-width: 480px) {
+  .memorial-photo {
+    width: min(210px, 70vw);
+    height: 255px;
+  }
+}

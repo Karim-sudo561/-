@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b32">
+  <meta name="description" content="موقع ذكر الله - مساحة هادئة للتسبيح والتحميد والاستغفار.">
+  <title>ذِكْر | اذكر الله</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">وَاذْكُرُوا اللَّهَ كَثِيرًا</div>
+    <h1>ذِكْر</h1>
+    <p>اجعل لسانك رطبًا بذكر الله</p>
+  </header>
+
+  <section class="dedication" aria-label="إهداء وصدقة جارية">
+    <div class="dedication-mark">۞</div>
+    <p class="dedication-label">صدقة جارية على روح</p>
+    <img
+      class="memorial-photo"
+      src="mohamed-abdullah.jpg"
+      alt="صورة المرحوم محمد عبدالله محمد"
+      loading="eager">
+    <h2>المرحوم محمد عبدالله محمد</h2>
+    <p class="dedication-note">شهيد حادث الوراق</p>
+    <p class="dedication-dua">اللهم اغفر له وارحمه، ونوّر قبره، واجعل ما يُقرأ ويُذكر هنا في ميزان حسناته، وارزقه الفردوس الأعلى.</p>
+  </section>
+
+  <main>
+    <p class="intro">مساحة بسيطة تساعدك على التسبيح والتحميد والاستغفار،<br>وتحفظ أعداد أذكارك على جهازك.</p>
+
+    <section class="quran-section" aria-label="القرآن الكريم بصوت الشيخ ياسر الدوسري">
+      <div class="quran-heading">
+        <span class="quran-icon">♪</span>
+        <div>
+          <h2>آياتٌ تُطمئنّ القلوب</h2>
+          <p>تلاوة من القرآن الكريم بصوت الشيخ ياسر الدوسري</p>
+        </div>
+      </div>
+      <iframe
+        class="quran-player"
+        src="https://www.tvquran.com/en/recitation/576/embeddable"
+        title="تلاوة سورة الفاتحة بصوت الشيخ ياسر الدوسري"
+        loading="lazy"
+        allow="autoplay"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+      <p class="audio-note">اضغط تشغيل للاستماع. قد يمنع المتصفح التشغيل التلقائي للصوت دون تفاعل منك.</p>
+    </section>
+
+    <nav class="tabs" aria-label="أقسام الأذكار">
+      <button class="tab active" data-target="sequence">التسبيح والتحميد</button>
+      <button class="tab" data-target="istighfar">الاستغفار</button>
+      <button class="tab" data-target="individual">أذكار متنوعة</button>
+    </nav>
+
+    <section class="panel active" id="sequence">
+      <div class="eyebrow">الورد المتتابع</div>
+      <h2>سبّح واحمد الله</h2>
+      <p class="hint">اضغط على الزر بعد الانتهاء من الذكر الظاهر، لينتقل بك إلى الذكر التالي. عند إكمال جميع الأذكار تُحسب دورة واحدة ويبدأ الورد من جديد.</p>
+      <div class="dhikr" id="sequenceText" aria-live="polite">سبحان الله</div>
+      <div class="progress" id="sequenceProgress">الذكر 1 من 5</div>
+      <button class="main-btn" id="nextDhikr">تمّ الذكر، التالي</button>
+      <div>
+        <div class="count" id="sequenceCount">0</div>
+        <span class="count-label">عدد الدورات المكتملة</span>
+      </div>
+    </section>
+
+    <section class="panel" id="istighfar">
+      <div class="eyebrow">باب الاستغفار</div>
+      <h2>استغفر الله العظيم</h2>
+      <p class="hint">ردّد الاستغفار واضغط على الزر مع كل مرة.</p>
+      <div class="dhikr">أستغفر الله العظيم</div>
+      <button class="main-btn" id="istighfarButton">استغفر الله</button>
+      <div>
+        <div class="count" id="istighfarCount">0</div>
+        <span class="count-label">عدد مرات الاستغفار</span>
+      </div>
+    </section>
+
+    <section class="panel" id="individual">
+      <div class="eyebrow">أذكار متنوعة</div>
+      <h2>اختر الذكر وردّده</h2>
+      <p class="hint">لكل ذكر عدّاد مستقل يُحفظ تلقائيًا على جهازك.</p>
+      <div class="cards" id="individualCards"></div>
+    </section>
+
+    <div class="actions">
+      <button class="reset" id="resetAll">تصفير جميع العدادات</button>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    اللهم اجعل هذا العمل خالصًا لوجهك الكريم، وانفع به من يقرأه وينشره.<br>
+    يمكنك مشاركة الموقع مع من تحب، فالدال على الخير كفاعله.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
